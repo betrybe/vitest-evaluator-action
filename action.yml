@@ -25,7 +25,7 @@ runs:
     - run: npm install
       shell: bash
     
-    - run: npx vitest
+    - run: npx vitest --reporter=json --outputFile.json=./evaluation.json --reporter=basic
       shell: bash
 
     - name: Setup Checkout
