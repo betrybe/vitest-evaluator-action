@@ -25,6 +25,7 @@ runs:
     - run: |
         cd $GITHUB_ACTION_PATH 
         npm install
+      shell: bash
     
     - run: npx vitest --reporter=json --outputFile.json=./evaluation.json --reporter=basic
       shell: bash
