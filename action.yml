@@ -14,19 +14,17 @@ runs:
     - run: echo Hello ${{ inputs.pr_author_username }}.
       shell: bash
 
-    - uses: actions/checkout@v3
-    
-    - uses: actions/setup-node@v3
+    - name: Setup Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
       with:
         node-version: '16'
 
-
-
-    # - uses: actions/setup-node@v3
-    #     with:
-    #       node-version: '16'
           
     - run: npm install
+      shell: bash
 
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
