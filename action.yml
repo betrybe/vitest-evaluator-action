@@ -48,8 +48,3 @@ runs:
     #     with: 
     #       path: 'evaluation.json'
     # - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
-
-    - name: Setup Checkout
-      uses: actions/checkout@v3
-      with:
-        repository: betrybe/vitest2-evaluator-action
