@@ -22,7 +22,6 @@ runs:
       with:
         node-version: '16'
 
-          
     - run: npm install
       shell: bash
 
