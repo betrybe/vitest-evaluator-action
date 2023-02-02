@@ -30,6 +30,14 @@ runs:
     - run: npx vitest --reporter=json --outputFile.json=./evaluation.json --reporter=basic
       shell: bash
 
+    - name: Run evaluator
+      if: always()
+      shell: bash
+      env:
+        INPUT_PR_AUTHOR_USERNAME: ${{inputs.pr_author_username}}
+      run: node $GITHUB_ACTION_PATH/src/evaluator.js
+
+
     - run: cat evaluation.json
       shell: bash
 
