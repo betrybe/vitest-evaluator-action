@@ -22,7 +22,7 @@ runs:
       with:
         node-version: '18'
 
-      run: |
+    - run: |
         cd $GITHUB_ACTION_PATH 
         npm install
     
