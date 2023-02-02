@@ -31,9 +31,12 @@ runs:
     - run: cat evaluation.json
       shell: bash
 
-    - name: Setup Checkout
-      uses: actions/checkout@v3
+    # - name: Setup Checkout
+    #   uses: actions/checkout@v3
     # - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
     #   shell: bash
     # - run: goodbye.sh
     #   shell: bash
+
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash
