@@ -22,8 +22,10 @@ runs:
         npm install
       shell: bash
     
-    - run: npx vitest --reporter=json --outputFile.json=./evaluation.json --reporter=basic
+    - name: Run Vitest
+      run: npx vitest --reporter=json --outputFile.json=./evaluation.json --reporter=basic
       shell: bash
+      continue-on-error: true
 
     - name: Run evaluator
       if: always()
