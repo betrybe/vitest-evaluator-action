@@ -23,7 +23,7 @@ runs:
       shell: bash
     
     - name: Run Vitest
-      run: npx vitest --reporter=json --outputFile.json=./evaluation.json --reporter=basic
+      run: npx vitest --dir=src --reporter=json --outputFile.json=./evaluation.json --reporter=basic
       shell: bash
       continue-on-error: true
 
