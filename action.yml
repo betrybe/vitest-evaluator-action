@@ -45,7 +45,7 @@ runs:
 
     - name: Save output to base64 1
       if: always()
-      id: teste1
+      id: teste2
       shell: bash
       run: echo "result=`cat result.json | base64 -w 0`"
 
