@@ -7,6 +7,7 @@ inputs:
 outputs:
   result:
     description: "Vitest unit tests JSON results in base64 format."
+    value: ${{steps.base64.outputs.result}}
 
 runs:
   using: "composite"
