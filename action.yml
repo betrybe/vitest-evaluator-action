@@ -39,6 +39,18 @@ runs:
 
     - name: Save output to base64
       if: always()
+      id: teste1
+      shell: bash
+      run: cat result.json
+
+    - name: Save output to base64 1
+      if: always()
+      id: teste1
+      shell: bash
+      run: echo "result=`cat result.json | base64 -w 0`"
+
+    - name: Save output to base64
+      if: always()
       id: base64
       shell: bash
       run: echo "result=`cat result.json | base64 -w 0`" >> $GITHUB_OUTPUT

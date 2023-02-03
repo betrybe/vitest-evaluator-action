@@ -37,12 +37,6 @@ const evaluations = requirements.map(({ description }) => ({
       : WRONG_ANSWER_GRADE,
 }));
 
-console.log({
-  github_username: githubUsername,
-  github_repository_name: githubRepositoryName,
-  evaluations: [...evaluations],
-})
-
 fs.writeFileSync(
   'result.json',
   JSON.stringify({
