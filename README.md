@@ -1,1 +1,1 @@
-# vitest2-evaluator-action
+# vitest-evaluator-action
