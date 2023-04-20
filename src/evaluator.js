@@ -6,8 +6,8 @@ const WRONG_ANSWER_GRADE = 1;
 const githubUsername = process.env.INPUT_PR_AUTHOR_USERNAME || 'no_actor';
 const githubRepositoryName = process.env.GITHUB_REPOSITORY || 'no_repository';
 
-const jestOuputFile = fs.readFileSync('evaluation.json');
-const { testResults } = JSON.parse(jestOuputFile);
+const jestOutputFile = fs.readFileSync('evaluation.json');
+const { testResults } = JSON.parse(jestOutputFile);
 
 const requirementsFile = fs.readFileSync('.trybe/requirements.json');
 const { requirements } = JSON.parse(requirementsFile);
